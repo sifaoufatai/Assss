@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><osm generator="Overpass API 0.7.59 e21c39fe" version="0.6">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2023-03-04T15:18:46Z"/>
+
+  <node id="966874673" lat="43.9297813" lon="4.8381057">
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="crossing"/>
+  </node>
+  <node id="2153435317" lat="43.9297530" lon="4.8379858">
+    <tag k="crossing" v="uncontrolled"/>
+    <tag k="highway" v="crossing"/>
+    <tag k="source" v="Bing"/>
+  </node>
+  <node id="6123617449" lat="43.9295915" lon="4.8380660"/>
+  <node id="6325144157" lat="43.9297540" lon="4.8381734"/>
+  <node id="6325144158" lat="43.9296881" lon="4.8381203"/>
+  <node id="6325144161" lat="43.9296514" lon="4.8380707"/>
+  <node id="6325144162" lat="43.9296967" lon="4.8380828"/>
+  <way id="83382077">
+    <nd ref="966874673"/>
+    <nd ref="2153435317"/>
+    <nd ref="152737"/>
+    <tag k="highway" v="unclassified"/>
+    <tag k="name" v="Rue Paul Éluard"/>
+    <tag k="name:etymology:wikidata" v="Q152176"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+  </way>
+  <way id="154964916">
+    <nd ref="1674101812"/>
+    <nd ref="1912714324"/>
+    <nd ref="1912714329"/>
+    <nd ref="2153435339"/>
+    <nd ref="1912714330"/>
+    <nd ref="1912714331"/>
+    <nd ref="1912723678"/>
+    <nd ref="1912723677"/>
+    <nd ref="966874673"/>
+    <tag k="highway" v="unclassified"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="180807349">
+    <nd ref="1912714328"/>
+    <nd ref="6123617448"/>
+    <nd ref="6123617449"/>
+    <nd ref="6325144160"/>
+    <nd ref="6123617450"/>
+    <nd ref="6325144159"/>
+    <nd ref="6123617451"/>
+    <nd ref="1912735433"/>
+    <nd ref="1912735424"/>
+    <nd ref="970624863"/>
+    <nd ref="6123617425"/>
+    <nd ref="7502982159"/>
+    <nd ref="970622072"/>
+    <tag k="highway" v="unclassified"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="205392267">
+    <nd ref="2153435317"/>
+    <nd ref="6325144162"/>
+    <nd ref="6325144158"/>
+    <nd ref="6325144157"/>
+    <tag k="highway" v="footway"/>
+    <tag k="source" v="Bing"/>
+  </way>
+  <way id="675400217">
+    <nd ref="966874673"/>
+    <nd ref="6325144162"/>
+    <nd ref="6325144161"/>
+    <nd ref="6123617449"/>
+    <tag k="highway" v="unclassified"/>
+    <tag k="oneway" v="yes"/>
+  </way>
+  <way id="737297284">
+    <nd ref="966873740"/>
+    <nd ref="7312472267"/>
+    <nd ref="7312472266"/>
+    <nd ref="7312472265"/>
+    <nd ref="7312472264"/>
+    <nd ref="7312472263"/>
+    <nd ref="7312472262"/>
+    <nd ref="7526597631"/>
+    <nd ref="7312472261"/>
+    <nd ref="6902806681"/>
+    <nd ref="7526597634"/>
+    <nd ref="6902806682"/>
+    <nd ref="6902806683"/>
+    <nd ref="10121897853"/>
+    <nd ref="966874673"/>
+    <tag k="bicycle" v="designated"/>
+    <tag k="foot" v="designated"/>
+    <tag k="highway" v="path"/>
+    <tag k="segregated" v="no"/>
+    <tag k="source" v="Bing"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic_sign" v="FR:C115"/>
+    <tag k="width" v="5"/>
+  </way>
+  <way id="783049726">
+    <nd ref="966874673"/>
+    <nd ref="6325144157"/>
+    <nd ref="4075650081"/>
+    <nd ref="4075650082"/>
+    <nd ref="7312472272"/>
+    <nd ref="7502982156"/>
+    <nd ref="7502982155"/>
+    <nd ref="970622160"/>
+    <tag k="bicycle" v="designated"/>
+    <tag k="foot" v="designated"/>
+    <tag k="highway" v="path"/>
+    <tag k="segregated" v="no"/>
+    <tag k="source" v="Bing"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic_sign" v="FR:C115"/>
+    <tag k="width" v="5"/>
+  </way>
+
+</osm>
