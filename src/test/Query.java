@@ -79,26 +79,26 @@ public class Query {
             transformer.transform(source, streamResult);
         }
         public ArrayList<Node> getNodes(String fichier) throws IOException {
-
+            ArrayList<Node> list = new ArrayList<>();
             File file = new File(fichier);
             InputStreamReader input;
             try (FileInputStream fileStream = new FileInputStream(file)) {
                 input = new InputStreamReader(fileStream);
-            }
-            BufferedReader reader = new BufferedReader(input);
-            ArrayList<Node> list = new ArrayList<>();
-            String line;
-            String id = null;
-            String maLat = null;
-            String maLon = null;
-            while ((line = reader.readLine()) != null) {
-                if(line.contains("<node")) {
-                    String [] pass2 = line.split("id=\"");
-                    String idNode1 = pass2[1];
-                    String[] idNode = idNode1.split("\" lat=\"");
-                    String [] latitude = idNode[1].split("\" lon=\"");
 
-                    String [] longitude = latitude[1].split("\"");
+                BufferedReader reader = new BufferedReader(input);
+
+                String line;
+                String id = null;
+                String maLat = null;
+                String maLon = null;
+                while ((line = reader.readLine()) != null) {
+                    if (line.contains("<node")) {
+                        String[] pass2 = line.split("id=\"");
+                        String idNode1 = pass2[1];
+                        String[] idNode = idNode1.split("\" lat=\"");
+                        String[] latitude = idNode[1].split("\" lon=\"");
+
+                        String[] longitude = latitude[1].split("\"");
 
 
                         id = idNode[0];
@@ -109,10 +109,9 @@ public class Query {
                     }
 
 
-
-
                 }
-            reader.close();
+                reader.close();
+            }
             return list;
 
             }
