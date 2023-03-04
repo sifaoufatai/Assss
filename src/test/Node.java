@@ -11,12 +11,13 @@ import java.util.*;
 public class Node  implements  Comparable<Node> {
     private Double x;
     private Double y;
-    private long id ;
+    private Double id ;
+    private long id2;
     private List<Node> neighbors;
     private Map<Node, Integer> costs;
     private int gScore;
 
-    public Node(Double x, Double y, long id, List<Node> neighbors, Map<Node, Integer> costs, int gScore) {
+    public Node(Double x, Double y, Double id, List<Node> neighbors, Map<Node, Integer> costs, int gScore) {
         this.x = x;
         this.y = y;
         this.id = id;
@@ -28,12 +29,14 @@ public Node(){
 
 
 }
-    public Node(Double x, Double y, long id) {
+    public Node(Double x, Double y, Double id) {
         this.x = x;
         this.y = y;
         this.id = id;
     }
-
+public Node(long id2){
+        this.id2=id2;
+}
 
     public Double getX() {
         return x;
@@ -51,11 +54,11 @@ public Node(){
         this.y = y;
     }
 
-    public long getId() {
+    public Double getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Double id) {
         this.id = id;
     }
 
@@ -132,13 +135,13 @@ public Node(){
         return s1;
     }
 
-    public Node(long id) {
+    public Node(Double id) {
         this.id = id;
     }
 
     public ArrayList<Node> searchNeigbor() throws IOException, ParserConfigurationException, TransformerException, SAXException {
         ArrayList<Node> list = new ArrayList<>();
-
+if(this.id)
         Query q = new Query();
     String file = "Listenoeud"+String.valueOf(this.id)+".xml";
 

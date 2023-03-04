@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class Dikstra {
-    private double INFINIADouble = Double.MAX_VALUE;
+    private Double INFINIADouble = Double.MAX_VALUE;
 
     public Dikstra() {
     }

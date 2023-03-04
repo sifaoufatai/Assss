@@ -27,7 +27,7 @@ public class Query {
 
 
 
-        public  Document getNodesViaOverpassNodeForItineraire( long nodeId) throws IOException, ParserConfigurationException, SAXException
+        public  Document getNodesViaOverpassNodeForItineraire( Double nodeId) throws IOException, ParserConfigurationException, SAXException
         {
             String hostname = "http://www.overpass-api.de/api/interpreter";
            /* String queryString = "way\r\n"
@@ -68,7 +68,7 @@ public class Query {
         }
 
 
-        public  void searchNodeForItineraire(long nodeid) throws IOException, ParserConfigurationException, SAXException, TransformerException
+        public  void searchNodeForItineraire(Double nodeid) throws IOException, ParserConfigurationException, SAXException, TransformerException
         {
             String fic = String.valueOf(nodeid);
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -104,7 +104,7 @@ public class Query {
                         id = idNode[0];
                         maLat = latitude[0];
                         maLon = longitude[0];
-                        Node node = new Node(Double.parseDouble(maLon), Double.parseDouble(maLat), Long.parseLong(id));
+                        Node node = new Node(Double.parseDouble(maLon), Double.parseDouble(maLat), Double.parseDouble(id));
                         list.add(node);
                     }
 
@@ -128,10 +128,18 @@ public class Query {
 
 
         public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException, SAXException {
+   Query q= new Query();
+     ArrayList<Node> listt;ArrayList<Node> list;
 
-        Node n1 = new Node(431);
-        n1.searchNeigbor();
-
+        listt=q.getNodes("NodeItineraire.fxml");
+        Node n1 = new Node(19124327);
+     list=   n1.searchNeigbor();
+           /* //for(Node n:list ) System.out.println(n.getId());
+            for(Node n:listt ) System.out.println(n.getId());
+            System.out.println(listt.contains(n1));
+            Node start = new Node(122655.0);
+            Node end = new Node(10700393998.0);
+**/
 
         }
 
