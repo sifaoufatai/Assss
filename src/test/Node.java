@@ -6,7 +6,7 @@ import javax.xml.transform.TransformerException;
 import java.io.*;
 import java.util.*;
 
-import static test.Query.getNodes;
+//import static test.Query.getNodes;
 
 public class Node  implements  Comparable<Node> {
     private Double x;
@@ -132,16 +132,20 @@ public Node(){
         return s1;
     }
 
+    public Node(long id) {
+        this.id = id;
+    }
+
     public ArrayList<Node> searchNeigbor() throws IOException, ParserConfigurationException, TransformerException, SAXException {
         ArrayList<Node> list = new ArrayList<>();
 
         Query q = new Query();
-        String c ="Listevoisin.fxml";
+    String file = "Listenoeud"+String.valueOf(this.id)+".xml";
 
-        q.searchNodeForItineraire(this.id,"Listeneighbor.fxml");
+       q.searchNodeForItineraire(this.id);
+     list=   q.getNodes(file);
 
-        File file = new File("Listeneighbor.fxml");
-        return getNodes(list, file);
+            return list;
 
     }
 
